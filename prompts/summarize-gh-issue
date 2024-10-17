@@ -1,0 +1,7 @@
+Summarize the following which was transcribed from a GitHub comment thread.
+Each comment is separated by a horizontal rule. Output a brief summary of the
+original issue (50 words or less), 3-4 bullet points (25 words or less each) for the
+responses, and if there is a solution, summarize it as its own block in 50 words
+or less. You may use code blocks when necessary. Keep the summarizes succint
+and factual, focusing only on the key information. The comment thread is as follows:
+
