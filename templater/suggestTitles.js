@@ -4,6 +4,9 @@ async function suggestTitles(tp, content, default_title="") {
 	const prompt = (await lib.getPrompt('generate-titles')) + content;
 	const response = await tp.ai.chat(prompt);
 	const titles = response.split('\n').filter(item => item !== "");
+	if (default_title !== "") {
+		titles.unshift(default_title);
+	}
 	console.log(response);
 	console.log(titles);
 	const suggested = await tp.system.suggester(titles.concat('Manual'), 
