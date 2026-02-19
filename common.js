@@ -61,6 +61,19 @@ const SuggestStatus = {
 exports.SuggestStatus = SuggestStatus;
 
 
+function hasIntersection(root, compare) {
+  if (!Array.isArray(compare)) {
+    compare = [compare];
+  }
+  if (!Array.isArray(root)) {
+    root = [root];
+  }
+
+  return root.some(item => compare.includes(item));
+}
+exports.hasIntersection = hasIntersection;
+
+
 async function suggest(tp, values, placeholder) {
 	const suggested = await tp.system.suggester(
 		values.concat(SuggestStatus.NEW, SuggestStatus.NONE),
